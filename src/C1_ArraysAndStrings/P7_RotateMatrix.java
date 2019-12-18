@@ -5,21 +5,27 @@ import java.util.Arrays;
 public class P7_RotateMatrix {
 
     public static void main(String args[]){
-        int a[][] = {{1, 2, 3}
-                    , {4, 5, 6}
-                    , {7, 8, 9}};
+        int a[][] = {{1, 2, 3, 0}
+                , {4, 5, 6, 0}
+                , {7, 8, 9, 0}
+        }, b[][] = {{1, 2}
+                , {4, 5}
+                , {7, 8}
+        };
         check(a, true);
         check(a, false);
+        check(b, true);
+        check(b, false);
     }
 
     private static int[][] rotateMatrix(int in[][], boolean rotateClockWise){
-        int out[][] = new int[in.length][in.length];
+        int out[][] = new int[in[0].length][in.length];
 
-        for (int i=0 ; i<in.length ; i++){
+        for (int i=0 ; i<in[0].length ; i++){
             for (int j=0 ; j<in.length ; j++){
                 out[i][j] = rotateClockWise ?
                         in[in.length - j - 1][i] :
-                        in[j][in.length - i - 1];
+                        in[j][in[0].length - i - 1];
             }
         }
 
