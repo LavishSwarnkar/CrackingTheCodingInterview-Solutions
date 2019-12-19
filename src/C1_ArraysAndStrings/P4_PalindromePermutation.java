@@ -36,7 +36,7 @@ public class P4_PalindromePermutation {
     }
 
     /* Using BitVector:
-     * Takeaway : n & (n-1) is always 0.
+     * Takeaway : n & (n-1) is always 0 if n contains only 1 bit as 1.
      */
     private static boolean isPalindromePermutationA2(String s){
         s = s.toLowerCase();
