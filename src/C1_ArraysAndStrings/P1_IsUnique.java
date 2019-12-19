@@ -6,7 +6,7 @@ import java.util.Map;
 public class P1_IsUnique {
 
     public static void main(String args[]){
-        check("LAVISH", "LAVISH SWARNKAR");
+        check("LAVISH", "LAVISH SWARNKAR", "ABCD", "AABC");
     }
 
     //Approach 1 using map
@@ -20,15 +20,16 @@ public class P1_IsUnique {
         return true;
     }
 
-    //Approach 2 without using additional DS. I used boolean array
+    //Approach 2 using bitVector
     private static boolean hasAllUniqueCharactersA2(String s){
-        boolean occ[] = new boolean[Character.MAX_VALUE];
-
-        for(Character c : s.toCharArray())
-            if(occ[c])
+        s = s.toUpperCase();
+        int count = 0;
+        for (Character c : s.toCharArray()) {
+            int i = c - 'A';
+            if((count & 1 << i) > 0)
                 return false;
-            else
-                occ[c] = true;
+            count |= 1 << i;
+        }
         return true;
     }
 

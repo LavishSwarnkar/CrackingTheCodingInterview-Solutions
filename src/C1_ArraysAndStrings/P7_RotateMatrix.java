@@ -11,11 +11,14 @@ public class P7_RotateMatrix {
         }, b[][] = {{1, 2}
                 , {4, 5}
                 , {7, 8}
+        }, c[][] = {{1, 2, 3, 4, 5}
+                , {4, 5, 6, 7, 8}
+                , {7, 8, 9, 10, 11}
         };
         check(a, true);
         check(a, false);
         check(b, true);
-        check(b, false);
+        check(c, true);
     }
 
     private static int[][] rotateMatrix(int in[][], boolean rotateClockWise){
@@ -40,10 +43,10 @@ public class P7_RotateMatrix {
 
     private static String getMatrixString(int a[][]){
         StringBuilder builder = new StringBuilder();
-        builder.append("[");
+        builder.append("\n[\n ");
         for (int[] row : a)
-            builder.append(Arrays.toString(row)).append(", ");
-        builder.delete(builder.length()-2, builder.length());
-        return builder.append("]").toString();
+            builder.append(Arrays.toString(row)).append(",\n ");
+        builder.delete(builder.length()-3, builder.length());
+        return builder.append("\n]").toString();
     }
 }
