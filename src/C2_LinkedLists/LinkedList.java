@@ -44,6 +44,11 @@ public class LinkedList {
         Node(int data){
             this.data = data;
         }
+
+        @Override
+        public String toString() {
+            return data + "";
+        }
     }
 
 }
