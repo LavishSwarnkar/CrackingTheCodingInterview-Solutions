@@ -1,4 +1,4 @@
 # Solutions to Questions in "Cracking The Coding Interview" Book 
 
 **[1. Arrays & Strings](src/C1_ArraysAndStrings)**\
-**2. Linked Lists**
+**[2. Linked Lists](src/C2_LinkedLists)**
