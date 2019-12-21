@@ -1,7 +1,6 @@
 package C3_StacksAndQueues;
 
 import java.util.EmptyStackException;
-import java.util.LinkedList;
 
 public class P6_AnimalShelter {
 
