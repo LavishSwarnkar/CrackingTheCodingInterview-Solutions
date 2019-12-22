@@ -13,10 +13,12 @@ public class P2_MinimalTree {
         );
 
         System.out.println(getMinimalBST(sortedArray));
-        //System.out.println(getMinimalBST2(arr, 0, arr.length - 1));
+        System.out.println(getMinimalBST2(arr, 0, arr.length - 1));
     }
 
-    //Author's Solution : Not working as expected
+    /**Author's Solution : Not working as expected as far as I can see.
+     * Correct me if I'm wrong.
+     */
     private static BinaryTree getMinimalBST2(int[] arr, int start, int end){
         if(end < start)
             return null;

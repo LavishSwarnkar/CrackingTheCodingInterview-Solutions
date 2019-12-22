@@ -19,6 +19,7 @@ public class P4_CheckBalanced {
         //System.out.println(isBalanced(n1).isBalanced);
     }
 
+    //Author's Solution
     private static boolean isBalanced2(BinaryTree tree){
         return getHeight(tree) != Integer.MAX_VALUE;
     }
@@ -34,6 +35,12 @@ public class P4_CheckBalanced {
         return Math.max(lHeight, rHeight) + 1;
     }
 
+    /**Well, this is my wrong solution.
+     * Actually I misunderstood the problem with the balancing I learnt
+     * in DSA class.
+     * The balancing here meant something else and it was clearly mentioned
+     * in the question. Ah, my mistake. :(
+     */
     static class Status{
         int weight;
         boolean isBalanced;
