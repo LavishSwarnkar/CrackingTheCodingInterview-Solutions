@@ -1,10 +1,10 @@
 package C3_StacksAndQueues;
 
 public class Node<T> {
-    Node<T> next = null;
-    T data;
+    public Node<T> next = null;
+    public T data;
 
-    Node(T data){
+    public Node(T data){
         this.data = data;
     }
 
