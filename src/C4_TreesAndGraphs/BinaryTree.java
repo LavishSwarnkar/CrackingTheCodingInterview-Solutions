@@ -3,7 +3,7 @@ package C4_TreesAndGraphs;
 class BinaryTree {
 
     int data;
-    BinaryTree leftSubtree, rightSubtree;
+    BinaryTree leftSubtree, rightSubtree, parent;
 
     BinaryTree(int data){
         this.data = data;
@@ -26,5 +26,9 @@ class BinaryTree {
     public BinaryTree setRightSubtree(BinaryTree rightSubtree) {
         this.rightSubtree = rightSubtree;
         return this;
+    }
+
+    public boolean isLeaf(){
+        return leftSubtree == null && rightSubtree == null;
     }
 }
