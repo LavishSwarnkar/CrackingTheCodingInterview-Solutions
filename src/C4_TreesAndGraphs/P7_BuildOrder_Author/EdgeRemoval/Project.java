@@ -1,14 +1,13 @@
-package C4_TreesAndGraphs.P7_BuildOrder.DFS;
+package C4_TreesAndGraphs.P7_BuildOrder_Author.EdgeRemoval;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Project {
-	public enum State {COMPLETE, PARTIAL, BLANK}
 	private ArrayList<Project> children = new ArrayList<Project>();
 	private HashMap<String, Project> map = new HashMap<String, Project>();
 	private String name;
-	private State state = State.BLANK;
+	private int dependencies = 0;
 	
 	public Project(String n) {
 		name = n;
@@ -22,18 +21,23 @@ public class Project {
 		if (!map.containsKey(node.getName())) {
 			children.add(node);
 			map.put(node.getName(), node);
+			node.incrementDependencies();
 		}
 	}
 	
-	public State getState() { 
-		return state;
-	}
-	
-	public void setState(State st) {
-		state = st;
+	public void incrementDependencies() {
+		dependencies++;
 	}
 	
 	public ArrayList<Project> getChildren() {
 		return children;
+	}
+	
+	public void decrementDependencies() {
+		dependencies--;
+	}
+	
+	public int getNumberDependencies() {
+		return dependencies;
 	}
 }

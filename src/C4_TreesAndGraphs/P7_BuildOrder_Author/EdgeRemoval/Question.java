@@ -1,4 +1,4 @@
-package C4_TreesAndGraphs.P7_BuildOrder.EdgeRemoval;
+package C4_TreesAndGraphs.P7_BuildOrder_Author.EdgeRemoval;
 
 import java.util.ArrayList;
 

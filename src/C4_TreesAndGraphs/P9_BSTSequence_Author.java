@@ -3,7 +3,7 @@ package C4_TreesAndGraphs;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class P9_BSTSequenceAuthor {
+public class P9_BSTSequence_Author {
 	
 	public static void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second, ArrayList<LinkedList<Integer>> results, LinkedList<Integer> prefix) {
 		/* One list is empty. Add the remainder to [a cloned] prefix and
