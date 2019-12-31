@@ -41,6 +41,9 @@ public class P9_Parens {
 
     //Author's Solution
     private static void addParen(ArrayList<String> list, int leftRem, int rightRem, char[] str, int index) {
+        for(int i=0 ; i<index ; i++)
+            System.out.print("\t");
+        System.out.println("(" + leftRem + ", " + rightRem + ", \"" + String.valueOf(str) + "\", " + index);
         if (leftRem < 0 || rightRem < leftRem) return; // invalid state
 
         if (leftRem == 0 && rightRem == 0) { /* all out of left and right parentheses */
@@ -48,10 +51,8 @@ public class P9_Parens {
         } else {
             str[index] = '('; // Add left and recurse
             addParen(list, leftRem - 1, rightRem, str, index + 1);
-            System.out.println(String.valueOf(str));
             str[index] = ')'; // Add right and recurse
             addParen(list, leftRem, rightRem - 1, str, index + 1);
-            System.out.println(String.valueOf(str));
         }
     }
 
