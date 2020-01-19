@@ -3,8 +3,8 @@ package C5_BitManipulation;
 public class P4_NextNumber {
 
     public static void main(String args[]){
-        System.out.println(getNextLargerNumber(3));
-        System.out.println(getPreviousSmallerNumber(5));
+        System.out.println(getNextLargerNumber(90));
+        System.out.println(getPreviousSmallerNumber(90));
     }
 
     private static int getPreviousSmallerNumber(int x){
