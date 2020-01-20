@@ -6,12 +6,13 @@ public class P4_PowerSet {
 
     public static void main(String args[]){
         //System.out.println(getPowerSet(new ArrayList<>(Arrays.asList(1, 2, 3)), 0));
-
-        System.out.println(getPowerSet(new ArrayList<>(Arrays.asList(1, 2, 3))));
+        getPowerSet(new ArrayList<>(Arrays.asList(1, 2, 3)), 0);
+        System.out.println();
     }
 
     //Efficient solution inspired from Author's Solution
     private static ArrayList<ArrayList<Integer>> getPowerSet(ArrayList<Integer> set, int index){
+        System.out.println("(" + set + ", " + index + ")");
         ArrayList<ArrayList<Integer>> powerSet;
         if(set.size() == index){
             powerSet = new ArrayList<>();
